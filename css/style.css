@@ -1,0 +1,300 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    overflow-x: hidden;
+}
+
+img {
+    width: 220px;
+    border-radius: 25px;
+}
+
+.conteudo {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.cabecalho {
+    background-color: #1d7f13;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.cabecalho .conteudo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipo {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.lista-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.menu-navegacao a {
+    color: #fff;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.menu-navegacao a:hover {
+    color: #000;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+.menu-toggle.ativo span:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+}
+
+.menu-toggle.ativo span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.ativo span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* ── AVATAR ADMIN ── */
+.avatar-admin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.avatar-icone {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+
+.avatar-icone svg {
+    width: 22px;
+    height: 22px;
+    fill: #fff;
+}
+
+.avatar-admin:hover .avatar-icone {
+    background: #fff;
+    border-color: #fff;
+}
+
+.avatar-admin:hover .avatar-icone svg {
+    fill: #1d7f13;
+}
+
+/* ── HERO ── */
+.secao-principal {
+    background: linear-gradient(135deg, #269e19, #031604);
+    color: #fff;
+    text-align: center;
+    padding: 180px 0 120px;
+    margin-top: 70px;
+}
+
+.texto-principal h1 {
+    font-size: clamp(2rem, 3rem, 3.2rem);
+    margin-bottom: 20px;
+}
+
+.texto-principal p {
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
+
+.botao-destaque {
+    background-color: #128503;
+    color: #fff;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.botao-destaque:hover {
+    background-color: #000;
+}
+
+.secao-recursos {
+    padding: 80px 0;
+}
+
+.secao-recursos h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #043a07;
+}
+
+.grade-recursos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.cartao-recurso {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px #014b05;
+    text-align: center;
+}
+
+.cartao-recurso h3 {
+    margin: 15px 0;
+    color: #043a07;
+}
+
+.cartao-recurso p {
+    color: #636262;
+}
+
+.secao-depoimentos {
+    padding: 80px 0;
+}
+
+.secao-depoimentos h2 {
+    text-align: center;
+    margin-bottom: 60px;
+    color: #043a07;
+}
+
+.grade-depoimentos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.cartao-depoimento {
+    background: #f8f9fa;
+    padding: 40px;
+    border-radius: 10px;
+    flex: 1 1 400px;
+    max-width: 500px;
+    border-left: 5px solid #49ad4e;
+}
+
+.cartao-depoimento p {
+    font-style: italic;
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.nome-autor {
+    font-weight: bold;
+    color: #043a07;
+}
+
+.rodape {
+    background-color: #043a07;
+    color: #fff;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.rodape p {
+    font-size: 0.9rem;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .menu-navegacao {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #043a07;
+        max-height: 0;
+        overflow: hidden;
+        transition: 0.3s;
+    }
+
+    .menu-navegacao.ativo {
+        max-height: 400px;
+    }
+
+    .lista-menu {
+        flex-direction: column;
+    }
+
+    .lista-menu a {
+        padding: 15px;
+        display: block;
+    }
+
+    .secao-principal {
+        padding: 120px 0 80px;
+        margin-top: 60px;
+    }
+
+    .grade-recursos {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao-depoimento {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-principal h1 {
+        font-size: 1.75rem;
+    }
+
+    .texto-principal p {
+        font-size: 0.95rem;
+    }
+
+    .botao-destaque {
+        width: 100%;
+    }
+}

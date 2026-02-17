@@ -1,0 +1,263 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    background: linear-gradient(135deg, #031604 0%, #043a07 50%, #1d7f13 100%);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ── HEADER ── */
+.cabecalho {
+    background-color: #1d7f13;
+    color: #fff;
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.cabecalho .conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logotipo {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 1.75rem;
+    letter-spacing: 1px;
+}
+
+.btn-voltar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.15);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 8px 18px;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.btn-voltar:hover {
+    background: #fff;
+    color: #1d7f13;
+}
+
+.btn-voltar svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* ── MAIN ── */
+.pagina-admin {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 20px 60px;
+}
+
+/* ── CARD ── */
+.card-acesso {
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.35);
+    width: 100%;
+    max-width: 460px;
+    overflow: hidden;
+}
+
+/* Badge Admin */
+.badge-admin {
+    background: linear-gradient(135deg, #1d7f13, #043a07);
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px 25px;
+}
+
+.badge-admin .icone-admin {
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+}
+
+.badge-admin .icone-admin svg {
+    width: 34px;
+    height: 34px;
+    fill: #fff;
+}
+
+.badge-admin h2 {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    margin-bottom: 4px;
+}
+
+.badge-admin p {
+    font-size: 0.85rem;
+    opacity: 0.8;
+}
+
+/* Tabs */
+.tabs {
+    display: flex;
+    border-bottom: 2px solid #e8f5e9;
+}
+
+.tabs button {
+    flex: 1;
+    padding: 16px;
+    border: none;
+    background: #f8fdf8;
+    color: #777;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+    letter-spacing: 0.5px;
+}
+
+.tabs button.ativo,
+.tabs button:hover {
+    background: #fff;
+    color: #1d7f13;
+    border-bottom: 3px solid #1d7f13;
+}
+
+/* Formulário */
+.corpo-card {
+    padding: 35px 40px 40px;
+}
+
+.grupo-campo {
+    margin-bottom: 20px;
+}
+
+.grupo-campo label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #043a07;
+    margin-bottom: 7px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.grupo-campo input {
+    width: 100%;
+    padding: 13px 16px;
+    border: 2px solid #d4edda;
+    border-radius: 10px;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 0.97rem;
+    color: #333;
+    background: #f8fdf8;
+    transition: 0.3s;
+    outline: none;
+}
+
+.grupo-campo input:focus {
+    border-color: #1d7f13;
+    background: #fff;
+    box-shadow: 0 0 0 4px rgba(29, 127, 19, 0.12);
+}
+
+.grupo-campo input::placeholder {
+    color: #aaa;
+}
+
+/* Extras cadastro */
+.campo-extra {
+    display: none;
+}
+
+.botao-submit {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(135deg, #1d7f13, #043a07);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 1.05rem;
+    font-weight: 800;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: 0.3s;
+    margin-top: 8px;
+}
+
+.botao-submit:hover {
+    background: #031604;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(4, 58, 7, 0.3);
+}
+
+/* Link painel (simula redirect) */
+.link-painel {
+    display: block;
+    text-align: center;
+    margin-top: 18px;
+    font-size: 0.88rem;
+    color: #777;
+}
+
+.link-painel a {
+    color: #1d7f13;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.link-painel a:hover {
+    text-decoration: underline;
+}
+
+/* ── RODAPÉ ── */
+.rodape {
+    background-color: #043a07;
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+}
+
+.rodape p {
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 0.85rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 520px) {
+    .corpo-card {
+        padding: 25px 22px 30px;
+    }
+
+    .badge-admin h2 {
+        font-size: 1.5rem;
+    }
+}

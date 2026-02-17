@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso Admin – Academy Power Fit</title>
+    <link rel="stylesheet" href="css/admin.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="cabecalho">
+        <div class="conteudo">
+            <div class="logotipo">Academy Power Fit</div>
+            <a href="index.html" class="btn-voltar">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                    <path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" />
+                </svg> <!--trocar por png dps-->
+                Voltar ao site
+            </a>
+        </div>
+    </header>
+
+    <!-- CONTEÚDO PRINCIPAL -->
+    <main class="pagina-admin">
+        <div class="card-acesso">
+
+            <!-- Badge topo -->
+            <div class="badge-admin">
+                <div class="icone-admin">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 4c1.86 0 3.36 1.5 3.36 3.36S13.86 11.72 12 11.72s-3.36-1.5-3.36-3.36S10.14 5 12 5zm0 8.4c2.24 0 6.72 1.12 6.72 3.36v1.68H5.28v-1.68c0-2.24 4.48-3.36 6.72-3.36z" />
+                    </svg>
+                </div>
+                <h2>Acesso Admin</h2>
+                <p>Área restrita – Academy Power Fit</p>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs">
+                <button class="ativo" onclick="mostrarLogin(this)">Login</button>
+                <button onclick="mostrarCadastro(this)">Cadastro</button>
+            </div>
+
+            <!-- Formulário -->
+            <div class="corpo-card">
+                <form action="painel.html">
+
+                    <!-- Campo nome (só cadastro) -->
+                    <div class="grupo-campo campo-extra" id="campo-nome">
+                        <label for="nome">Nome completo</label>
+                        <input type="text" id="nome" placeholder="Seu nome completo">
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" placeholder="admin@academypowerfit.com">
+                    </div>
+
+                    <div class="grupo-campo">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" placeholder="••••••••">
+                    </div>
+
+                    <!-- Confirmar senha (só cadastro) -->
+                    <div class="grupo-campo campo-extra" id="campo-confirmar">
+                        <label for="confirmar-senha">Confirmar senha</label>
+                        <input type="password" id="confirmar-senha" placeholder="••••••••">
+                    </div>
+
+                    <button type="submit" class="botao-submit" id="texto-botao">Entrar</button>
+                </form>
+
+                <p class="link-painel">
+                    Ir direto ao painel? <a href="painel.html">Acessar painel →</a>
+                </p>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <p>&copy; 2026 - Academy Power Fit | Desenvolvido por Beatriz Souza, Carlos Barreto, Carlos Eduardo e Elin
+            Almeida.</p>
+    </footer>
+
+
+    <!--
+<script>
+    function mostrarLogin(btn) {
+        document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('ativo'));
+        btn.classList.add('ativo');
+        document.querySelectorAll('.campo-extra').forEach(c => c.style.display = 'none');
+        document.getElementById('texto-botao').textContent = 'Entrar';
+    }
+
+    function mostrarCadastro(btn) {
+        document.querySelectorAll('.tabs button').forEach(b => b.classList.remove('ativo'));
+        btn.classList.add('ativo');
+        document.querySelectorAll('.campo-extra').forEach(c => c.style.display = 'block');
+        document.getElementById('texto-botao').textContent = 'Cadastrar';
+    }
+</script>
+-->
+
+</body>
+
+</html>
