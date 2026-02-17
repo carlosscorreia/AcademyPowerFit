@@ -1,0 +1,568 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde-escuro: #043a07;
+    --verde-medio: #1d7f13;
+    --verde-claro: #49ad4e;
+    --fundo: #f0f7f0;
+    --branco: #ffffff;
+    --cinza-texto: #555;
+    --borda: #d4edda;
+}
+
+body {
+    font-family: 'Nunito', Arial, sans-serif;
+    background: var(--fundo);
+    color: #333;
+    min-height: 100vh;
+}
+
+/* ── HEADER ADMIN ── */
+.cabecalho-admin {
+    background: linear-gradient(135deg, var(--verde-medio), var(--verde-escuro));
+    color: #fff;
+    padding: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(4, 58, 7, 0.4);
+}
+
+.cabecalho-admin .conteudo {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+
+.cabecalho-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.logotipo {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 1.6rem;
+    letter-spacing: 1px;
+}
+
+.badge-painel {
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #fff;
+    font-size: 0.72rem;
+    font-weight: 800;
+    padding: 4px 10px;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.cabecalho-direita {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.info-usuario {
+    text-align: right;
+}
+
+.info-usuario .nome {
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+.info-usuario .cargo {
+    font-size: 0.72rem;
+    opacity: 0.75;
+}
+
+.avatar-header {
+    width: 42px;
+    height: 42px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-header svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+.btn-sair {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.88rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.35);
+    padding: 8px 16px;
+    border-radius: 30px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.btn-sair:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.btn-sair svg {
+    width: 15px;
+    height: 15px;
+    fill: currentColor;
+}
+
+/* ── LAYOUT PRINCIPAL ── */
+.wrapper {
+    display: flex;
+    margin-top: 70px;
+    min-height: calc(100vh - 70px);
+}
+
+/* ── SIDEBAR ── */
+.sidebar {
+    width: 260px;
+    background: var(--verde-escuro);
+    min-height: 100%;
+    padding: 30px 0;
+    flex-shrink: 0;
+    position: fixed;
+    top: 70px;
+    bottom: 0;
+    overflow-y: auto;
+}
+
+.sidebar-titulo {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 0.72rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 0 24px 10px;
+}
+
+.sidebar-menu {
+    list-style: none;
+}
+
+.sidebar-menu li a {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+    padding: 13px 24px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    transition: 0.2s;
+    border-left: 3px solid transparent;
+}
+
+.sidebar-menu li a svg {
+    width: 18px;
+    height: 18px;
+    fill: currentColor;
+    flex-shrink: 0;
+}
+
+.sidebar-menu li a:hover,
+.sidebar-menu li a.ativo {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-left-color: var(--verde-claro);
+}
+
+.sidebar-divisor {
+    border: none;
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    margin: 15px 24px;
+}
+
+/* ── CONTEÚDO PRINCIPAL ── */
+.conteudo-principal {
+    margin-left: 260px;
+    flex: 1;
+    padding: 36px 36px 60px;
+}
+
+/* ── BOAS-VINDAS ── */
+.secao-boas-vindas {
+    background: linear-gradient(135deg, var(--verde-medio), var(--verde-escuro));
+    color: #fff;
+    border-radius: 16px;
+    padding: 30px 36px;
+    margin-bottom: 36px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.secao-boas-vindas h1 {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+}
+
+.secao-boas-vindas p {
+    font-size: 0.9rem;
+    opacity: 0.85;
+}
+
+.btn-voltar-site {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #fff;
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    padding: 12px 22px;
+    border-radius: 30px;
+    font-weight: 800;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    transition: 0.3s;
+}
+
+.btn-voltar-site:hover {
+    background: #fff;
+    color: var(--verde-escuro);
+}
+
+.btn-voltar-site svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* ── CARDS ESTATÍSTICAS ── */
+.grade-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 36px;
+}
+
+.card-stat {
+    background: var(--branco);
+    border-radius: 14px;
+    padding: 24px 22px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    border-top: 4px solid var(--verde-claro);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.card-stat .icone-stat {
+    width: 48px;
+    height: 48px;
+    background: #e8f5e9;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.card-stat .icone-stat svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--verde-medio);
+}
+
+.card-stat .numero {
+    font-family: 'Bebas Neue', Arial, sans-serif;
+    font-size: 2rem;
+    color: var(--verde-escuro);
+    line-height: 1;
+}
+
+.card-stat .rotulo {
+    font-size: 0.8rem;
+    color: var(--cinza-texto);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ── SEÇÕES DE GERENCIAMENTO ── */
+.secao-gerenciar {
+    background: var(--branco);
+    border-radius: 16px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+    margin-bottom: 28px;
+    overflow: hidden;
+}
+
+.secao-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 22px 28px;
+    border-bottom: 2px solid #e8f5e9;
+    background: #fafffe;
+}
+
+.secao-header-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.icone-secao {
+    width: 40px;
+    height: 40px;
+    background: #e8f5e9;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icone-secao svg {
+    width: 20px;
+    height: 20px;
+    fill: var(--verde-medio);
+}
+
+.secao-header h2 {
+    font-size: 1.15rem;
+    color: var(--verde-escuro);
+    font-weight: 800;
+}
+
+.secao-header .contagem {
+    font-size: 0.8rem;
+    color: var(--cinza-texto);
+    font-weight: 600;
+}
+
+.btn-adicionar {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    background: linear-gradient(135deg, var(--verde-medio), var(--verde-escuro));
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.btn-adicionar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(4, 58, 7, 0.3);
+}
+
+.btn-adicionar svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+}
+
+/* ── TABELA DE ITENS ── */
+.tabela-itens {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tabela-itens thead tr {
+    background: #f0f7f0;
+}
+
+.tabela-itens th {
+    text-align: left;
+    padding: 13px 20px;
+    font-size: 0.78rem;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--cinza-texto);
+    font-weight: 800;
+}
+
+.tabela-itens tbody tr {
+    border-top: 1px solid #e8f5e9;
+    transition: 0.2s;
+}
+
+.tabela-itens tbody tr:hover {
+    background: #f8fdf8;
+}
+
+.tabela-itens td {
+    padding: 16px 20px;
+    font-size: 0.92rem;
+    color: #444;
+    vertical-align: middle;
+}
+
+.tabela-itens td:first-child {
+    font-weight: 700;
+    color: var(--verde-escuro);
+}
+
+/* Status badge */
+.badge-status {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.badge-status.ativo {
+    background: #e8f5e9;
+    color: var(--verde-medio);
+}
+
+.badge-status.inativo {
+    background: #fce4e4;
+    color: #c0392b;
+}
+
+/* Ações */
+.acoes-linha {
+    display: flex;
+    gap: 8px;
+}
+
+.btn-acao {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 7px 14px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Nunito', Arial, sans-serif;
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+    text-decoration: none;
+}
+
+.btn-acao svg {
+    width: 13px;
+    height: 13px;
+    fill: currentColor;
+}
+
+.btn-editar {
+    background: #e8f5e9;
+    color: var(--verde-escuro);
+}
+
+.btn-editar:hover {
+    background: var(--verde-medio);
+    color: #fff;
+}
+
+.btn-remover {
+    background: #fce4e4;
+    color: #c0392b;
+}
+
+.btn-remover:hover {
+    background: #c0392b;
+    color: #fff;
+}
+
+/* ── RODAPÉ ── */
+.rodape {
+    background-color: var(--verde-escuro);
+    color: #fff;
+    text-align: center;
+    padding: 25px 0;
+    margin-top: auto;
+}
+
+.rodape p {
+    font-size: 0.85rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ── RESPONSIVO ── */
+@media (max-width: 1100px) {
+    .grade-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .sidebar {
+        display: none;
+    }
+
+    .conteudo-principal {
+        margin-left: 0;
+        padding: 24px 20px 50px;
+    }
+
+    .secao-boas-vindas {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 600px) {
+    .grade-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 14px;
+    }
+
+    .tabela-itens th:nth-child(2),
+    .tabela-itens td:nth-child(2) {
+        display: none;
+    }
+
+    .cabecalho-admin .conteudo {
+        padding: 0 16px;
+    }
+
+    .info-usuario {
+        display: none;
+    }
+}
+
+@media (max-width: 420px) {
+    .grade-stats {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .card-stat {
+        padding: 16px 14px;
+    }
+
+    .card-stat .icone-stat {
+        display: none;
+    }
+}

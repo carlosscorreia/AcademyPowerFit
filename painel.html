@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel Admin – Academy Power Fit</title>
+    <link rel="stylesheet" href="css/painel.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Nunito:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+
+    <!-- HEADER ADMIN -->
+    <header class="cabecalho-admin">
+        <div class="conteudo">
+            <div class="cabecalho-esquerda">
+                <div class="logotipo">Academy Power Fit</div>
+                <span class="badge-painel">Painel Admin</span>
+            </div>
+            <div class="cabecalho-direita">
+                <div class="info-usuario">
+                    <div class="nome">Administrador</div>
+                    <div class="cargo">Gerente do Sistema</div>
+                </div>
+                <div class="avatar-header">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z" />
+                    </svg>
+                </div>
+                <a href="admin.html" class="btn-sair">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path
+                            d="M17 7l-1.41 1.41L18.17 11H8v2h10.17l-2.58 2.58L17 17l5-5-5-5zM4 5h8V3H4c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h8v-2H4V5z" />
+                    </svg>
+                    Sair
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrapper">
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <p class="sidebar-titulo">Menu</p>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#" class="ativo">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
+                        </svg>
+                        Dashboard
+                    </a>
+                </li>
+                <li>
+                    <a href="#secao-servicos">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                        </svg>
+                        Serviços
+                    </a>
+                </li>
+                <li>
+                    <a href="#secao-equipamentos">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29l-1.43-1.43z" />
+                        </svg>
+                        Equipamentos
+                    </a>
+                </li>
+                <li>
+                    <a href="#secao-depoimentos">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M21 15c0 1.1-.9 2-2 2H7l-4 4V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v10z" />
+                        </svg>
+                        Depoimentos
+                    </a>
+                </li>
+            </ul>
+            <hr class="sidebar-divisor">
+            <p class="sidebar-titulo">Configurações</p>
+            <ul class="sidebar-menu">
+                <li>
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+                        </svg>
+                        Usuários
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                        </svg>
+                        Ver site
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+        <!-- CONTEÚDO PRINCIPAL -->
+        <main class="conteudo-principal">
+
+            <!-- Boas-vindas -->
+            <div class="secao-boas-vindas">
+                <div>
+                    <h1>Bem-vindo ao Painel Admin!</h1>
+                    <p>Gerencie os conteúdos do site Academy Power Fit com facilidade.</p>
+                </div>
+                <a href="index.html" class="btn-voltar-site">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+                    </svg>
+                    Voltar ao site
+                </a>
+            </div>
+
+            <!-- Estatísticas -->
+            <div class="grade-stats">
+                <div class="card-stat">
+                    <div class="icone-stat">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="numero">4</div>
+                        <div class="rotulo">Serviços</div>
+                    </div>
+                </div>
+                <div class="card-stat">
+                    <div class="icone-stat">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29l-1.43-1.43z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="numero">6</div>
+                        <div class="rotulo">Equipamentos</div>
+                    </div>
+                </div>
+                <div class="card-stat">
+                    <div class="icone-stat">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M21 15c0 1.1-.9 2-2 2H7l-4 4V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v10z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="numero">4</div>
+                        <div class="rotulo">Depoimentos</div>
+                    </div>
+                </div>
+                <div class="card-stat">
+                    <div class="icone-stat">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 3c1.66 0 3 1.34 3 3s-1.34 3-3 3-3-1.34-3-3 1.34-3 3-3zm0 14.2c-2.5 0-4.71-1.28-6-3.22.03-1.99 4-3.08 6-3.08 1.99 0 5.97 1.09 6 3.08-1.29 1.94-3.5 3.22-6 3.22z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="numero">1</div>
+                        <div class="rotulo">Admin</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ── SERVIÇOS ── -->
+            <section class="secao-gerenciar" id="secao-servicos">
+                <div class="secao-header">
+                    <div class="secao-header-esquerda">
+                        <div class="icone-secao">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2>Serviços</h2>
+                            <span class="contagem">4 itens cadastrados</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-adicionar">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                        </svg>
+                        Adicionar
+                    </a>
+                </div>
+                <table class="tabela-itens">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Descrição</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Velocidade</td>
+                            <td>Treinos personalizados para resultados rápidos e eficientes.</td>
+                            <td><span class="badge-status ativo">Ativo</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>
+                                        Editar
+                                    </a>
+                                    <a href="#" class="btn-acao btn-remover">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>
+                                        Remover
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Equipamentos</td>
+                            <td>Equipamentos modernos com qualidade e segurança.</td>
+                            <td><span class="badge-status ativo">Ativo</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>
+                                        Editar
+                                    </a>
+                                    <a href="#" class="btn-acao btn-remover">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>
+                                        Remover
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Aplicativo para alunos</td>
+                            <td>Aplicativo para manter você orientado a qualquer hora.</td>
+                            <td><span class="badge-status ativo">Ativo</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>
+                                        Editar
+                                    </a>
+                                    <a href="#" class="btn-acao btn-remover">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>
+                                        Remover
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Vestiários com chuveiro</td>
+                            <td>Conforto e higiene pensados para o seu dia a dia.</td>
+                            <td><span class="badge-status inativo">Inativo</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>
+                                        Editar
+                                    </a>
+                                    <a href="#" class="btn-acao btn-remover">
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>
+                                        Remover
+                                    </a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- ── EQUIPAMENTOS ── -->
+            <section class="secao-gerenciar" id="secao-equipamentos">
+                <div class="secao-header">
+                    <div class="secao-header-esquerda">
+                        <div class="icone-secao">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path
+                                    d="M20.57 14.86L22 13.43 20.57 12 17 15.57 8.43 7 12 3.43 10.57 2 9.14 3.43 7.71 2 5.57 4.14 4.14 2.71 2.71 4.14l1.43 1.43L2 7.71l1.43 1.43L2 10.57 3.43 12 7 8.43 15.57 17 12 20.57 13.43 22l1.43-1.43L16.29 22l2.14-2.14 1.43 1.43 1.43-1.43-1.43-1.43L22 16.29l-1.43-1.43z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2>Equipamentos</h2>
+                            <span class="contagem">6 itens cadastrados</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-adicionar">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                        </svg>
+                        Adicionar
+                    </a>
+                </div>
+                <table class="tabela-itens">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Categoria</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Esteira profissional</td>
+                            <td>Cardio</td>
+                            <td><span class="badge-status ativo">Ativo</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>Editar</a>
+                                    <a href="#" class="btn-acao btn-remover"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>Remover</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Bicicleta ergométrica</td>
+                            <td>Cardio</td>
+                            <td><span class="badge-status ativo">Ativo</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>Editar</a>
+                                    <a href="#" class="btn-acao btn-remover"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>Remover</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Banco de supino</td>
+                            <td>Musculação</td>
+                            <td><span class="badge-status ativo">Ativo</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>Editar</a>
+                                    <a href="#" class="btn-acao btn-remover"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>Remover</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Rack de anilhas</td>
+                            <td>Musculação</td>
+                            <td><span class="badge-status ativo">Ativo</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>Editar</a>
+                                    <a href="#" class="btn-acao btn-remover"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>Remover</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Cabo funcional</td>
+                            <td>Funcional</td>
+                            <td><span class="badge-status inativo">Inativo</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>Editar</a>
+                                    <a href="#" class="btn-acao btn-remover"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>Remover</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Elíptico digital</td>
+                            <td>Cardio</td>
+                            <td><span class="badge-status ativo">Ativo</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>Editar</a>
+                                    <a href="#" class="btn-acao btn-remover"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>Remover</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- ── DEPOIMENTOS ── -->
+            <section class="secao-gerenciar" id="secao-depoimentos">
+                <div class="secao-header">
+                    <div class="secao-header-esquerda">
+                        <div class="icone-secao">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                                <path d="M21 15c0 1.1-.9 2-2 2H7l-4 4V5c0-1.1.9-2 2-2h14c1.1 0 2 .9 2 2v10z" />
+                            </svg>
+                        </div>
+                        <div>
+                            <h2>Depoimentos</h2>
+                            <span class="contagem">4 itens cadastrados</span>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-adicionar">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+                        </svg>
+                        Adicionar
+                    </a>
+                </div>
+                <table class="tabela-itens">
+                    <thead>
+                        <tr>
+                            <th>Autor</th>
+                            <th>Depoimento</th>
+                            <th>Status</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Carlos Eduardo</td>
+                            <td>"Resultados incríveis em poucas semanas. Ambiente motivador."</td>
+                            <td><span class="badge-status ativo">Publicado</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>Editar</a>
+                                    <a href="#" class="btn-acao btn-remover"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>Remover</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Beatriz Silva</td>
+                            <td>"Nunca fui tão motivada a treinar. Recomendo."</td>
+                            <td><span class="badge-status ativo">Publicado</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>Editar</a>
+                                    <a href="#" class="btn-acao btn-remover"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>Remover</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Carlos Barreto</td>
+                            <td>"Ambiente limpo e profissionais qualificados."</td>
+                            <td><span class="badge-status ativo">Publicado</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>Editar</a>
+                                    <a href="#" class="btn-acao btn-remover"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>Remover</a>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Elin Almeida</td>
+                            <td>"Os professores ajudaram muito a alcançar meus objetivos."</td>
+                            <td><span class="badge-status inativo">Pendente</span></td>
+                            <td>
+                                <div class="acoes-linha">
+                                    <a href="#" class="btn-acao btn-editar"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25zM20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" />
+                                        </svg>Editar</a>
+                                    <a href="#" class="btn-acao btn-remover"><svg xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 24 24">
+                                            <path
+                                                d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" />
+                                        </svg>Remover</a>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+        </main>
+    </div>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+        <p>&copy; 2026 - Academy Power Fit | Desenvolvido por Beatriz Souza, Carlos Barreto, Carlos Eduardo e Elin
+            Almeida.</p>
+    </footer>
+
+</body>
+
+</html>
